@@ -15,6 +15,19 @@ a{
 }
 body{
     max-width:100%;
+    scrollbar-width: thin;
+    overflow: overlay;
+}
+body::-webkit-scrollbar {
+    width: 8px
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 45%);
 }
 
 .content{
@@ -86,7 +99,27 @@ body{
     color:var(--gold);
 }
 
-
+.section{
+    margin:0 15% 100px;
+    padding-top:200px;
+}
+.section h1{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom:50px;
+}
+.section p{
+    margin-left:30px;
+    margin-bottom:20px;
+}
+.section ul{
+    margin-left:30px;
+    margin-bottom:20px;
+}
+.section article{
+    margin-left:30px;
+    margin-bottom:20px;
+}
 
 
 
@@ -210,6 +243,13 @@ footer .underfooter-con p{
 
 
 @media only screen and (max-width:800px){
+    .section{
+        margin:0 5% 100px;
+        padding-top:200px;
+    }
+    .section h1{
+        font-size:45px;
+    }
     .content{
         z-index:-1;
     }
@@ -413,7 +453,18 @@ footer .underfooter-con p{
         margin: 25px 0px 20px;
     }
 }
-
+@media only screen and (max-width:500px){
+    .section {
+        padding-top: 120px;
+    }
+    .section h1 {
+        font-size: 40px;
+    }
+    .section> article, p, ul{
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+}
 @media only screen and (max-width:450px){
     .underfooter-con a {
         font-size: 10px;
