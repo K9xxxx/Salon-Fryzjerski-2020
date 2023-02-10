@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/kontakt/style.css">
-    <link rel="stylesheet" href="../css/fontawesome-free-6.1.1-web/css/all.min.css">
-    <link rel="stylesheet" href="../css/icofont/icofont.min.css">
+    <link rel="stylesheet" href="../css/kontakt/icofont/icofont.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Exo&display=swap" rel="stylesheet">
@@ -52,20 +51,22 @@
         </div>
         <div class="section-no2">
             <div class="section-no2-flex">
-                <div class="kontakt-map"></div>
+                <div class="kontakt-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.782362740944!2d17.933711913361996!3d50.668301279247636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47105309100fb4df%3A0xbbb5f5a861c898c!2sKatowicka%2067%2C%2046-020%20Opole!5e0!3m2!1sen!2spl!4v1674249527362!5m2!1sen!2spl" width="800" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div class="kontakt-content">
                     <div class="kontakt-info">
                         <div class="info-container-main">
                             <div class="container-hlp">
                                 <div class="container-off">
-                                    <img src="../img/kontakt/phone.svg" alt="">
+                                    <img src="../img/kontakt/phone.svg" alt="Telefon icon">
                                     <p>Kontakt</p>
                                 </div>
                             </div>
                             <div class="container-on">
-                                <img src="../img/kontakt/phone-white.svg" alt="">
+                                <img src="../img/kontakt/phone-white.svg" alt="Biały telefon icon">
                                 <p>+48 694358660</p>
-                                <img src="../img/kontakt/message-white.svg" alt="">
+                                <img src="../img/kontakt/message-white.svg" alt="Biała koperta(wiadomość) icon">
                                 <p>salon2020.kontakt
                                     <br>
                                     @gmail.com</p>
@@ -74,12 +75,12 @@
                         <div class="info-container-main">
                             <div class="container-hlp">
                                 <div class="container-off">
-                                    <img src="../img/kontakt/map-pin.svg" alt="">
+                                    <img src="../img/kontakt/map-pin.svg" alt="lokalizacja icon">
                                     <p>Adres</p>
                                 </div>
                             </div>
                             <div class="container-on">
-                                <img src="../img/kontakt/map-pin-white.svg" alt="">
+                                <img src="../img/kontakt/map-pin-white.svg" alt="Biała lokalizacja icon">
                                 <p>ul. Katowicka 67,
                                     <br>
                                     46-020 Opole
@@ -89,12 +90,12 @@
                         <div class="info-container-main">
                             <div class="container-hlp">
                                 <div class="container-off">
-                                    <img src="../img/kontakt/clock.svg" alt="">
+                                    <img src="../img/kontakt/clock.svg" alt="Zegar(godziny otwarcia) icon">
                                     <p>Godziny otwarcia</p>
                                 </div>
                             </div>
                             <div class="container-on">
-                                <img src="../img/kontakt/clock-white.svg" alt="">
+                                <img src="../img/kontakt/clock-white.svg" alt="Zegar biały(godziny otwarcia) icon">
                                 <p>Pn-Pt
                                     <br>
                                     10.00 - 20.00
@@ -108,8 +109,56 @@
                         </div>
                     </div>
                     <div class="kontakt-form">
-
+                        <h2>Wypełnij formularz</h2>
+                        <form id="form" action="/">
+                            <div class="input-control">
+                                <input id="name" name="name" type="text">
+                                <div class="input-info">
+                                    <i class="icofont-ui-user"></i>
+                                    <label for="name">Imie</label>
+                                </div>
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <input id="email" name="email" type="text">
+                                <div class="input-info">
+                                    <i class="icofont-ui-message"></i>
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <input id="phone"name="phone" type="phone">
+                                <div class="input-info">
+                                    <i class="icofont-phone"></i>
+                                    <label for="phone">Numer Telefonu (opcjonalnie)</label>
+                                </div>
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <textarea id="message"name="message" type="message"></textarea>
+                                <div class="input-info">
+                                    <i class="icofont-ui-messaging"></i>
+                                <label for="message">Wiadomość</label>
+                                </div>
+                                <div class="error"></div>
+                            </div>
+                            <button  >Wyślij</button>
+                        </form>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-no3">
+            <div class="payments-main">
+                <h3>Obsługujemy płatności</h3>
+                <div class="payments-flex">
+                    <img src="../img/kontakt/Visa.svg" alt="Płatność Visa">
+                    <img src="../img/kontakt/Visa_Electron.svg" alt="Płatność Visa Electron">
+                    <img src="../img/kontakt/MasterCard_Logo.svg" alt="Płatność Mastercard">
+                    <img src="../img/kontakt/mastercard-electronic.svg" alt="Płatność Mastercard electronic">
+                    <img src="../img/kontakt/Maestro.svg" alt="Płatność Maestro">
+                    <img src="../img/kontakt/Blik_logo.svg" alt="Płatność Blik">
                 </div>
             </div>
         </div>
