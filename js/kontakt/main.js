@@ -102,4 +102,82 @@ iconNav.addEventListener('click',()=>{
 iconClose.addEventListener('click',()=>{
   tl.to('.navigation-mobile-active',0.3,{right:"-100%"});
 })
-console.log(infoContainer4)
+
+///////////////////
+
+
+
+
+
+
+
+
+
+
+
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const message = document.getElementById('message');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+//wyjasnienie czym jest error i jak ma działąc
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+// czym jest sukces i co ma sie dziac 
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+//sprawdzanie zapisania poprawnosci maila
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const messageValue = message.value.trim();
+
+
+    //sprawdzanie danych i przypisywanie im odpowienich wartosci - sukces albo error
+    if(nameValue === '') {
+        setError(name, 'Prosze podać Imie');
+    } else {
+        setSuccess(name);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Prosze podać E-mail');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Prosze podać prawidłowy E-mail');
+    } else {
+        setSuccess(email);
+    }
+
+
+    if(messageValue === '') {
+        setError(message, 'Brak treści');
+    } else {
+        setSuccess(message);
+    }
+
+};
