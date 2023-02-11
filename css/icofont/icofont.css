@@ -33,14 +33,29 @@ url("./fonts/icofont.woff") format("woff");
   -webkit-font-smoothing: antialiased;
 }
 
-.icofont-facebook:before
+.icofont-diamond:before
 {
-  content: "\ed37";
+  content: "\ef01";
 }
 
-.icofont-instagram:before
+.icofont-plus:before
 {
-  content: "\ed46";
+  content: "\efc2";
+}
+
+.icofont-safety:before
+{
+  content: "\efdc";
+}
+
+.icofont-water-drop:before
+{
+  content: "\f027";
+}
+
+.icofont-cut:before
+{
+  content: "\edeb";
 }
 
 .icofont-location-pin:before
@@ -48,14 +63,9 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ef79";
 }
 
-.icofont-clock-time:before
+.icofont-ui-message:before
 {
-  content: "\eedc";
-}
-
-.icofont-ui-clock:before
-{
-  content: "\ec4e";
+  content: "\ec67";
 }
 
 .icofont-phone:before
@@ -63,19 +73,24 @@ url("./fonts/icofont.woff") format("woff");
   content: "\efbb";
 }
 
-.icofont-ui-message:before
+.icofont-clock-time:before
 {
-  content: "\ec67";
+  content: "\eedc";
 }
 
-.icofont-double-right:before
+.icofont-instagram:before
 {
-  content: "\ea7c";
+  content: "\ed46";
 }
 
-.icofont-wall-clock:before
+.icofont-facebook:before
 {
-  content: "\f022";
+  content: "\ed37";
+}
+
+.icofont-close:before
+{
+  content: "\eee4";
 }
 
 .icofont-navigation-menu:before
@@ -83,9 +98,24 @@ url("./fonts/icofont.woff") format("woff");
   content: "\efa2";
 }
 
-.icofont-close:before
+.icofont-ui-user:before
 {
-  content: "\eee4";
+  content: "\ec8e";
+}
+
+.icofont-ui-messaging:before
+{
+  content: "\ec68";
+}
+
+.icofont-double-right:before
+{
+  content: "\ea7c";
+}
+
+.icofont-ruler:before
+{
+  content: "\ec01";
 }
 
 .icofont-xs
