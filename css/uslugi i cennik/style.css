@@ -11,9 +11,7 @@
   font-family: 'Exo', sans-serif;
   user-select: cyan;
 }
-*::selection {
-  background-color: #4eb1a5;
-}
+
 a {
   text-decoration: none;
 }
@@ -978,6 +976,7 @@ footer .underfooter-con p {
   background-image: url('../../img/uslugi i cennik/uslugi-i-cennik.png');
   background-position: center;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .section-banner h1 {
@@ -1003,7 +1002,7 @@ footer .underfooter-con p {
 }
 .section-banner span a:hover {
   display: inline-block;
-  color: hsl(0, 0%, 60%);
+  color: var(--gold);
 }
 .section-banner span p {
   display: inline-block;
@@ -2130,7 +2129,6 @@ footer .underfooter-con p {
     margin-top: 100px;
   }
   .section-banner span a:hover {
-    color: hsl(0, 0%, 0%);
     text-shadow: none;
   }
   .abs.text-container-1 {

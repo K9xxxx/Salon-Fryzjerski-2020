@@ -1,39 +1,39 @@
-let iconNav = document.querySelector(".nav-burger");
-let iconClose = document.querySelector(".close-con-icon");
-let offerDiv = document.querySelectorAll(".offer");
+let iconNav = document.querySelector('.nav-burger');
+let iconClose = document.querySelector('.close-con-icon');
+let offerDiv = document.querySelectorAll('.offer');
 
 const tl = new TimelineMax();
 const tlNavScene = new TimelineMax();
 const tlInitial = new TimelineMax();
 const tlOpacityOffer = new TimelineMax();
 
-tlNavScene.to(".navigation", 0.3, { height: "70px" });
+tlNavScene.to('.navigation', 0.3, { height: '70px' });
 tlNavScene.to(
-  ".logo-container",
+  '.logo-container',
   0.3,
-  { height: "50px", width: "50px" },
-  "-=0.3",
+  { height: '50px', width: '50px' },
+  '-=0.3',
 );
-tlNavScene.to(".anchor-flex>a", 0.3, { fontSize: "15px" }, "-=0.3");
-tlNavScene.to(".call-con-fit a", 0.3, { fontSize: "15px" }, "-=0.3");
-tlNavScene.to(".call-con-anchor a", 0.3, { fontSize: "13px" }, "-=0.3");
+tlNavScene.to('.anchor-flex>a', 0.3, { fontSize: '15px' }, '-=0.3');
+tlNavScene.to('.call-con-fit a', 0.3, { fontSize: '15px' }, '-=0.3');
+tlNavScene.to('.call-con-anchor a', 0.3, { fontSize: '13px' }, '-=0.3');
 
-tlInitial.to(".quick-info h2", 0, { opacity: 0 });
-tlInitial.to(".quick-info p", 0, { opacity: 0 });
+tlInitial.to('.quick-info h2', 0, { opacity: 0 });
+tlInitial.to('.quick-info p', 0, { opacity: 0 });
 
 $(document).ready(function () {
-  tlInitial.to(".quick-info h2", 0.5, { opacity: 1, delay: 0.4 });
-  tlInitial.to(".quick-info p", 0.5, { opacity: 1, delay: 0.4 });
+  tlInitial.to('.quick-info h2', 0.5, { opacity: 1, delay: 0.4 });
+  tlInitial.to('.quick-info p', 0.5, { opacity: 1, delay: 0.4 });
 
   let controller = new ScrollMagic.Controller();
 
-  $(".offer").each(function () {
+  $('.offer').each(function () {
     let offerLoop = new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.9,
       reverse: false,
     })
-      .setClassToggle(this, "fade-in")
+      .setClassToggle(this, 'fade-in')
       .addTo(controller);
   });
 
@@ -46,9 +46,32 @@ $(document).ready(function () {
     .addTo(controller);
 });
 
-iconNav.addEventListener("click", () => {
-  tl.to(".navigation-mobile-active", 0.3, { right: 0 });
+iconNav.addEventListener('click', () => {
+  tl.to('.navigation-mobile-active', 0.3, { right: 0 });
 });
-iconClose.addEventListener("click", () => {
-  tl.to(".navigation-mobile-active", 0.3, { right: "-100%" });
+iconClose.addEventListener('click', () => {
+  tl.to('.navigation-mobile-active', 0.3, { right: '-100%' });
 });
+
+const sectionBanner = document.querySelector('.section-banner');
+const sectionBannerH1 = document.querySelector('.section-banner h1');
+const sectionBannerSpan = document.querySelector('.section-banner span');
+
+if (sectionBanner) {
+  window.addEventListener('scroll', function () {
+    const scrollPosition = window.pageYOffset;
+    const parallaxSpeed = 0.5;
+    const textSpeed = 0.75;
+
+    const yOffset = scrollPosition * parallaxSpeed;
+
+    const textOffset = scrollPosition * textSpeed;
+
+    sectionBanner.style.backgroundPosition = `center ${-yOffset}px`;
+
+    if (sectionBannerH1) {
+      sectionBannerH1.style.transform = `translateY(${-textOffset}px)`;
+      sectionBannerSpan.style.transform = `translateY(${-textOffset}px)`;
+    }
+  });
+}

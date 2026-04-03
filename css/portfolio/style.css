@@ -108,6 +108,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-image: url('../../img/portfolio/banner-h.webp');
   background-position: center;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .section-banner h1 {
@@ -133,7 +134,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .section-banner span a:hover {
   display: inline-block;
-  color: hsl(0, 0%, 60%);
+  color: var(--gold);
 }
 .section-banner span p {
   display: inline-block;
@@ -603,7 +604,6 @@ footer .underfooter-con p {
     margin-top: 100px;
   }
   .section-banner span a:hover {
-    color: hsl(0, 0%, 0%);
     text-shadow: none;
   }
   .section-no1 {

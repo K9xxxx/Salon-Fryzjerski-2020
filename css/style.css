@@ -8,11 +8,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Exo", sans-serif;
+  font-family: 'Exo', sans-serif;
 }
-*::selection {
-  background-color: #4eb1a5;
-}
+
 a {
   text-decoration: none;
 }
@@ -358,7 +356,7 @@ body::-webkit-scrollbar-thumb:hover {
   border: 2px solid var(--gold);
 }
 .square-img::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   top: 0;
@@ -397,7 +395,7 @@ body::-webkit-scrollbar-thumb:hover {
 .cennik-banner {
   height: 500px;
   position: relative;
-  background: url("../img/cennik-banner-s.webp");
+  background: url('../img/cennik-banner-s.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -418,13 +416,13 @@ body::-webkit-scrollbar-thumb:hover {
   align-self: flex-end;
 }
 .cennik-for.men {
-  background-image: url("../img/dla-mezczyzn.webp");
+  background-image: url('../img/dla-mezczyzn.webp');
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 .cennik-for.women {
-  background-image: url("../img/dla-kobiet.webp");
+  background-image: url('../img/dla-kobiet.webp');
   background-position: 100%;
   background-repeat: no-repeat;
 }
@@ -510,7 +508,7 @@ body::-webkit-scrollbar-thumb:hover {
   transition: all 0.3s ease-in-out;
 }
 .owner {
-  font-family: "Caveat", sans-serif;
+  font-family: 'Caveat', sans-serif;
   font-style: italic;
   font-size: 18px;
   margin-top: 25px;
@@ -1148,7 +1146,7 @@ footer .underfooter-con p {
     align-self: flex-end;
   }
   .cennik-for.women {
-    background-image: url("../img/dla-kobiet.webp");
+    background-image: url('../img/dla-kobiet.webp');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 105% 100%;
@@ -1319,7 +1317,7 @@ footer .underfooter-con p {
     align-self: flex-end;
   }
   .cennik-for.women {
-    background-image: url("../img/dla-kobiet.webp");
+    background-image: url('../img/dla-kobiet.webp');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 105% 100%;
@@ -1746,7 +1744,7 @@ footer .underfooter-con p {
     align-self: flex-end;
   }
   .cennik-for.women {
-    background-image: url("../img/dla-kobiet.webp");
+    background-image: url('../img/dla-kobiet.webp');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 105% 100%;
@@ -1824,7 +1822,7 @@ footer .underfooter-con p {
     height: 250px;
   }
   .swiper.galery-fe .swiper-slide::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -1849,7 +1847,7 @@ footer .underfooter-con p {
     height: 250px;
   }
   .swiper.galery-ma .swiper-slide::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
